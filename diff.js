@@ -1,7 +1,7 @@
 const diff = (integer1, integer2) => {
   const circle = 360;
-  let int1=integer2-integer1;
-  let int2=circle-integer2-integer1;
+  const int1=integer2-integer1;
+  const int2=circle-integer2-integer1;
   let result;
   
   if (int1<int2 && int2>0) 
