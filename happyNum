@@ -1,13 +1,14 @@
 let result;
 let finish;
-
+let tried=0;
 const sumOfSquareDigits = (num) => {
   let str=String(num);
   let result = 0;
    for (let i=0; i<str.length;i++)
-  {result+=Math.pow((str[i]*1),2)};
+  {result+=Math.pow((str[i]*1),2)
+  tried++};
 
- if (result!==1) 
+ if (result!==1 && tried<10) 
   {sumOfSquareDigits(result)}
     else { finish=result};
     
@@ -19,4 +20,4 @@ const happyNum = (num) => {
   else return false;
   } 
   
-happyNum(7);
+happyNum(50);
