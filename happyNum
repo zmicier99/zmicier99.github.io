@@ -1,0 +1,22 @@
+let result;
+let finish;
+
+const sumOfSquareDigits = (num) => {
+  let str=String(num);
+  let result = 0;
+   for (let i=0; i<str.length;i++)
+  {result+=Math.pow((str[i]*1),2)};
+
+ if (result!==1) 
+  {sumOfSquareDigits(result)}
+    else { finish=result};
+    
+return finish;
+}
+    
+const happyNum = (num) => {
+  if (sumOfSquareDigits(num) === 1) return true;
+  else return false;
+  } 
+  
+happyNum(7);
