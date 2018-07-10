@@ -3,7 +3,7 @@ let finish;
 let tried=0;
 const sumOfSquareDigits = (num) => {
   let str=String(num);
-  let result = 0;
+  result = 0;
    for (let i=0; i<str.length;i++)
   {result+=Math.pow((str[i]*1),2)
   tried++};
