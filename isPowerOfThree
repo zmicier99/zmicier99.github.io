@@ -3,7 +3,7 @@ const isPowerOfThree = (num) =>{
   let result = 1 ;
   while (result < num)
   {
-    result=result*three;}
+    result*=three;}
     
     if (result=== num)
     return true;
