@@ -1,23 +1,25 @@
-//formattedTime.js
-//Реализуйте и экспортируйте 
-//по умолчанию функцию, которая принимает на вход 
-//количество минут (прошедших с начала суток) и 
-//возвращает строку, являющуюся временем в формате чч:мм.
-
+// BEGIN (write your solution here)
 const formattedTime = (num) => {
   let hours;
-  let minutes=60;
+  let minutes = 60;
   let result;
-  
-  if (num%minutes === 0) {
-    hours = num/minutes;
-  return result = `В Минске ${hours}:00`;
+
+  if (num % minutes === 0) {
+    hours = num / minutes;
+    if (String(hours).length === 2)
+      return result = `${hours}:00`;
+    else return result = `0${hours}:00`
   }
-  else 
-  hours=Math.floor(num/minutes);
-  minutes=num-hours*60;
-  return result = `В Минске ${hours}:${minutes}`;
-  
-  }
-  
-  formattedTime(754);
+  else
+    hours = Math.floor(num / minutes);
+  minutes = num - hours * 60;
+  if (String(hours).length === 2 && String(minutes).length === 2)
+    return result = `${hours}:${minutes}`;
+  else if (String(minutes).length === 2)
+    return result = `0${hours}:${minutes}`;
+  else return result = `0${hours}:0${minutes}`
+
+}
+
+export default formattedTime;
+// END
